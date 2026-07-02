@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaswant Singh | ML Engineer</title>
+<meta name="description" content="Jaswant Singh: machine learning engineer. Deployed ML projects in NLP, semantic search, and retrieval augmented generation.">
+<style>
+:root{
+  --bg:#ffffff;
+  --panel:#f5f5f7;
+  --ink:#1d1d1f;
+  --gray:#6e6e73;
+  --gray-light:#86868b;
+  --blue:#0071e3;
+  --blue-hover:#0077ed;
+  --green:#30a14e;
+  --radius:22px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.47;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;height:48px}
+.nav-name{font-size:.94rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.nav-name:hover{text-decoration:none}
+.nav-links{display:flex;gap:28px;font-size:.8rem}
+.nav-links a{color:rgba(29,29,31,.8)}
+.nav-links a:hover{color:var(--ink);text-decoration:none}
+
+/* ===== HERO ===== */
+header{padding:130px 0 110px;text-align:center}
+.eyebrow{font-size:.95rem;font-weight:600;color:var(--gray);letter-spacing:-.01em;margin-bottom:14px}
+h1{font-size:clamp(2.6rem,7vw,4.3rem);font-weight:700;letter-spacing:-.028em;line-height:1.06;max-width:19ch;margin:0 auto}
+.hero-sub{margin:26px auto 0;font-size:clamp(1.1rem,2.4vw,1.35rem);line-height:1.42;color:var(--gray);max-width:34ch;font-weight:400;letter-spacing:-.012em}
+.hero-cta{margin-top:34px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;font-size:1.02rem}
+.hero-cta a{padding:11px 22px;border-radius:980px;transition:background .18s ease}
+.hero-cta a::after{content:" ›";font-weight:400}
+.hero-cta a:hover{background:rgba(0,0,0,.06);text-decoration:none}
+.pill{display:inline-block;background:var(--blue);color:#fff;font-weight:400}
+.pill::after{content:none!important}
+.pill:hover{background:var(--blue-hover)!important;text-decoration:none}
+
+/* ===== SECTIONS ===== */
+section{padding:44px 0}
+.section-head{text-align:center;margin-bottom:44px}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.024em;line-height:1.1}
+.section-sub{margin-top:12px;font-size:1.12rem;color:var(--gray);letter-spacing:-.01em}
+
+/* ===== PROJECTS ===== */
+.project{background:var(--panel);border-radius:var(--radius);padding:52px clamp(26px,6vw,72px);margin-bottom:26px;text-align:center}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.project h3{font-size:clamp(1.6rem,3.6vw,2.1rem);font-weight:700;letter-spacing:-.02em;line-height:1.12}
+.project .stack{margin-top:10px;font-size:.92rem;color:var(--gray-light);letter-spacing:-.005em}
+.project p.blurb{margin:20px auto 0;font-size:1.06rem;color:var(--gray);max-width:58ch;letter-spacing:-.01em}
+.project-links{margin-top:26px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;font-size:1.04rem}
+.project-links a::after{content:" ›";font-weight:400}
+
+/* ===== SKILLS ===== */
+.skills-panel{background:var(--panel);border-radius:var(--radius);padding:46px clamp(26px,5vw,60px)}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:34px 44px}
+.skill-cell h4{font-size:1.02rem;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.skill-cell p{font-size:.95rem;color:var(--gray);letter-spacing:-.005em}
+
+/* ===== EXPERIENCE ===== */
+.role{background:var(--panel);border-radius:var(--radius);padding:34px clamp(26px,5vw,52px);margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
+.role-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
+.role h3{font-size:1.18rem;font-weight:700;letter-spacing:-.015em}
+.role-org{color:var(--gray);font-weight:400}
+.role-dates{font-size:.86rem;color:var(--gray-light)}
+.role p{font-size:.98rem;color:var(--gray);letter-spacing:-.008em}
+
+/* ===== EDUCATION STRIP ===== */
+.edu{text-align:center;padding:56px 0 30px}
+.edu p{font-size:1.05rem;color:var(--gray);letter-spacing:-.01em}
+.edu strong{color:var(--ink);font-weight:600}
+
+/* ===== FOOTER ===== */
+footer{margin-top:60px;border-top:1px solid rgba(0,0,0,.08);padding:34px 0 60px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.foot-note{font-size:.86rem;color:var(--gray-light)}
+.foot-note a{color:var(--gray)}
+.foot-links{display:flex;gap:22px;font-size:.86rem}
+.foot-links a{color:var(--gray)}
+
+@media(max-width:640px){
+  header{padding:84px 0 70px}
+  .nav-links{gap:16px}
+  .project{text-align:left}
+  .status,.project-links{justify-content:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="nav-name" href="#top">Jaswant Singh</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="eyebrow">Machine Learning Engineer</div>
+    <h1>I build ML systems. Then I ship them.</h1>
+    <p class="hero-sub">Every project here is deployed and running. Live demo, REST API, Docker image, unit tests.</p>
+    <div class="hero-cta">
+      <a class="pill" href="#projects">View projects</a>
+      <a href="https://github.com/Jaswant06" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://huggingface.co/JaswantDev" target="_blank" rel="noopener">Hugging Face</a>
+      <a href="https://linkedin.com/in/jaswantsingh06" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Projects.</h2>
+      <p class="section-sub">Don't take my word for it. Every demo is live, try one.</p>
+    </div>
+    <div id="project-list"></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Skills.</h2>
+      <p class="section-sub">Tools I have shipped with, not a keyword dump.</p>
+    </div>
+    <div class="skills-panel">
+      <div class="skill-grid" id="skill-list"></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Experience.</h2>
+    </div>
+    <div id="role-list"></div>
+    <div class="edu">
+      <p><strong>Master of Applied Computer Science</strong>, Concordia University, Montreal · expected 2027<br>
+      <strong>B.E. Computer Science (Information Security)</strong>, Chandigarh University · 2024 · Certified Ethical Hacker</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-note">Open to ML/AI co-op and internship roles. <a href="mailto:jaswantsingh.eng@gmail.com">jaswantsingh.eng@gmail.com</a></div>
+    <div class="foot-links">
+      <a href="https://github.com/Jaswant06" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://huggingface.co/JaswantDev" target="_blank" rel="noopener">Hugging Face</a>
+      <a href="https://linkedin.com/in/jaswantsingh06" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   ADD NEW PROJECTS HERE.
+   Copy one object, paste it at the TOP of the array (newest
+   first), edit the fields, save, upload to GitHub. Done.
+   "demo" and "code" are optional: delete the line if a project
+   has neither, and the card adapts automatically.
+   ============================================================ */
+const PROJECTS = [
+  {
+    name: "DocuMind: RAG PDF Assistant",
+    status: "live",
+    stack: "Python · Llama-3.3-70B · Sentence-Transformers · FastAPI · Docker",
+    blurb: "Ask questions about any PDF and get answers grounded in the document itself, with page citations. Retrieval augmented generation constrains a 70B LLM to answer only from retrieved passages, and the pipeline refuses to answer when the document does not contain the answer.",
+    demo: "https://huggingface.co/spaces/JaswantDev/rag-pdf-assistant",
+    code: "https://github.com/Jaswant06/rag-pdf-assistant"
+  },
+  {
+    name: "AI Resume Matcher",
+    status: "live",
+    stack: "Python · Sentence-Transformers · FastAPI · Docker",
+    blurb: "Scores a resume against a job description using sentence embeddings, surfacing missing requirements by meaning rather than keyword overlap. Stress-tested and honestly documented: similarity cannot reason about years of experience or degree equivalence, so the scope is constrained to what the model can actually do.",
+    demo: "https://huggingface.co/spaces/JaswantDev/ai-resume-matcher",
+    code: "https://github.com/Jaswant06/ai-resume-matcher"
+  },
+  {
+    name: "Multi-Label Emotion Classifier",
+    status: "live",
+    stack: "PyTorch · Hugging Face Transformers",
+    blurb: "BERTweet fine-tuned for 11-label emotion classification on SemEval-2018, benchmarked against TF-IDF, BiLSTM, and DistilBERT baselines. 0.73 micro F1 with per-label threshold tuning, plus a calibration stress test on out-of-distribution text with documented root causes.",
+    demo: "https://huggingface.co/spaces/JaswantDev/tweet-emotion-classifier",
+    code: "https://github.com/Jaswant06/semeval-emotion-classification-pytorch"
+  }
+];
+
+/* Edit skills here. Each entry is [label, items]. */
+const SKILLS = [
+  ["Programming", "Python, Java, SQL, Bash, Git, Linux"],
+  ["Machine Learning & NLP", "PyTorch, Hugging Face Transformers, Sentence-Transformers, scikit-learn, pandas, NumPy, transformer fine-tuning, model evaluation and calibration"],
+  ["LLM & RAG", "Retrieval augmented generation, embeddings, semantic search, prompt engineering, hallucination prevention and grounding"],
+  ["Deployment", "FastAPI, REST APIs, Docker, pytest, Gradio, Hugging Face Spaces, Oracle Cloud Infrastructure"],
+  ["Security", "Vulnerability assessment, network segmentation, Zero Trust, CVSS, NIST CSF, OT/ICS security"]
+];
+
+/* Edit experience here. Each entry: title, org, dates, one-line summary. */
+const ROLES = [
+  ["AI Model Evaluator", "Mercor · Remote", "2026 – present",
+   "Evaluate AI-generated documents and presentations against multi-dimensional rubrics covering content accuracy, visual quality, and editability. Produce calibrated scores backed by concrete, slide-level and section-level evidence, keeping rationales consistent with scores across domains from engineering to business."],
+  ["Advanced AI Data Trainer / Editor", "Invisible Technologies · Remote", "2024 – present",
+   "Evaluate LLM responses against detailed project rubrics for accuracy, completeness, and instruction adherence. Promoted to Editor based on evaluation quality: now review and correct other evaluators' work and write structured reports on recurring model failure patterns for distributed training teams."],
+  ["OT Security Engineer", "NG Energy Solutions · Contract", "2023 – 2025",
+   "Hardened Industrial Control Systems and OT networks: vulnerability assessment with CVSS-based remediation prioritization, network segmentation, access control, and industrial firewall configuration. Documented findings and remediation plans for engineering and IT teams."]
+];
+
+/* ===== Rendering (no need to touch below this line) ===== */
+function esc(s){const d=document.createElement("div");d.textContent=s;return d.innerHTML;}
+
+document.getElementById("project-list").innerHTML = PROJECTS.map(p => {
+  const links = [
+    p.demo ? `<a href="${esc(p.demo)}" target="_blank" rel="noopener">Try the live demo</a>` : "",
+    p.code ? `<a href="${esc(p.code)}" target="_blank" rel="noopener">View the code</a>` : ""
+  ].filter(Boolean).join("");
+  return `<article class="project">
+    ${p.status === "live" ? `<div class="status">Live</div>` : ""}
+    <h3>${esc(p.name)}</h3>
+    <div class="stack">${esc(p.stack)}</div>
+    <p class="blurb">${esc(p.blurb)}</p>
+    <div class="project-links">${links}</div>
+  </article>`;
+}).join("");
+
+document.getElementById("skill-list").innerHTML = SKILLS.map(([label, items]) =>
+  `<div class="skill-cell"><h4>${esc(label)}</h4><p>${esc(items)}</p></div>`
+).join("");
+
+document.getElementById("role-list").innerHTML = ROLES.map(([title, org, dates, summary]) =>
+  `<div class="role">
+    <div class="role-top"><h3>${esc(title)} <span class="role-org">· ${esc(org)}</span></h3><span class="role-dates">${esc(dates)}</span></div>
+    <p>${esc(summary)}</p>
+  </div>`
+).join("");
+</script>
+</body>
+</html>
