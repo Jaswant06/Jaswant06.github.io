@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaswant Singh | ML Engineer</title>
 <meta name="description" content="Jaswant Singh: machine learning engineer. Deployed ML projects in NLP, semantic search, and retrieval augmented generation.">
+<meta name="color-scheme" content="light dark">
 <style>
 :root{
   --bg:#ffffff;
@@ -15,8 +16,28 @@
   --blue:#0071e3;
   --blue-hover:#0077ed;
   --green:#30a14e;
+  --nav-bg:rgba(255,255,255,.8);
+  --nav-link:rgba(29,29,31,.8);
+  --hairline:rgba(0,0,0,.08);
+  --hover-bg:rgba(0,0,0,.06);
   --radius:22px;
   --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#000000;
+    --panel:#1c1c1e;
+    --ink:#f5f5f7;
+    --gray:#a1a1a6;
+    --gray-light:#8e8e93;
+    --blue:#2997ff;
+    --blue-hover:#5ab0ff;
+    --green:#32d74b;
+    --nav-bg:rgba(0,0,0,.8);
+    --nav-link:rgba(245,245,247,.8);
+    --hairline:rgba(255,255,255,.12);
+    --hover-bg:rgba(255,255,255,.1);
+  }
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -28,12 +49,12 @@ a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4
 .wrap{max-width:980px;margin:0 auto;padding:0 22px}
 
 /* ===== NAV ===== */
-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--hairline)}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;height:48px}
 .nav-name{font-size:.94rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
 .nav-name:hover{text-decoration:none}
-.nav-links{display:flex;gap:28px;font-size:.8rem}
-.nav-links a{color:rgba(29,29,31,.8)}
+.nav-links{display:flex;gap:28px;font-size:.8rem;align-items:center}
+.nav-links a{color:var(--nav-link)}
 .nav-links a:hover{color:var(--ink);text-decoration:none}
 
 /* ===== HERO ===== */
@@ -44,7 +65,7 @@ h1{font-size:clamp(2.6rem,7vw,4.3rem);font-weight:700;letter-spacing:-.028em;lin
 .hero-cta{margin-top:34px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;font-size:1.02rem}
 .hero-cta a{padding:11px 22px;border-radius:980px;transition:background .18s ease}
 .hero-cta a::after{content:" ›";font-weight:400}
-.hero-cta a:hover{background:rgba(0,0,0,.06);text-decoration:none}
+.hero-cta a:hover{background:var(--hover-bg);text-decoration:none}
 .pill{display:inline-block;background:var(--blue);color:#fff;font-weight:400}
 .pill::after{content:none!important}
 .pill:hover{background:var(--blue-hover)!important;text-decoration:none}
@@ -85,7 +106,7 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.024em;l
 .edu strong{color:var(--ink);font-weight:600}
 
 /* ===== FOOTER ===== */
-footer{margin-top:60px;border-top:1px solid rgba(0,0,0,.08);padding:34px 0 60px}
+footer{margin-top:60px;border-top:1px solid var(--hairline);padding:34px 0 60px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .foot-note{font-size:.86rem;color:var(--gray-light)}
 .foot-note a{color:var(--gray)}
