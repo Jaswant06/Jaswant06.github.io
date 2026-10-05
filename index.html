@@ -4,8 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaswant Singh | ML Engineer</title>
-<meta name="description" content="Jaswant Singh: machine learning engineer. Deployed ML projects in NLP, semantic search, retrieval augmented generation, and LLM routing.">
+<meta name="description" content="Jaswant Singh: machine learning engineer. Deployed ML projects in LLM routing, retrieval augmented generation, NLP and semantic search, each with a live demo, code and tests.">
 <meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://jaswant06.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaswant06.github.io/">
+<meta property="og:title" content="Jaswant Singh | ML Engineer">
+<meta property="og:description" content="Machine learning systems, built and deployed: LLM routing, RAG and NLP, each with a live demo, code and tests.">
+<meta property="og:image" content="https://jaswant06.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jaswant06.github.io/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='44' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='34' font-weight='700' fill='%23fff' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jaswant Singh",
+  "url": "https://jaswant06.github.io/",
+  "jobTitle": "Machine Learning Engineer",
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Concordia University"},
+    {"@type": "CollegeOrUniversity", "name": "Chandigarh University"}
+  ],
+  "knowsAbout": ["Machine learning", "Large language models", "LLM routing", "Retrieval augmented generation", "Natural language processing", "Model evaluation", "FastAPI", "Docker"],
+  "sameAs": [
+    "https://github.com/Jaswant06",
+    "https://huggingface.co/JaswantDev",
+    "https://linkedin.com/in/jaswantsingh06"
+  ]
+}
+</script>
 <style>
 :root{
   --bg:#ffffff;
@@ -86,6 +116,20 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;letter-spacing:-.024em;l
 .project-links{margin-top:26px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;font-size:1.04rem}
 .project-links a::after{content:" ›";font-weight:400}
 
+.project.featured{padding-bottom:44px}
+.badges{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.badges .status{margin-bottom:0}
+.badge{font-size:.8rem;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.06em}
+.highlights{list-style:none;margin:22px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:10px;max-width:72ch}
+.highlights li{font-size:.86rem;color:var(--ink);background:var(--bg);border-radius:980px;padding:7px 15px;letter-spacing:-.005em}
+.shot{display:block;margin:38px auto 0;max-width:780px}
+.shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--hairline);box-shadow:0 24px 48px -28px rgba(0,0,0,.35)}
+
+/* ===== PROOF STRIP ===== */
+.proof{margin:64px auto 0;max-width:820px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:1px solid var(--hairline);padding-top:30px}
+.proof strong{display:block;font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:700;letter-spacing:-.025em}
+.proof span{display:block;margin-top:4px;font-size:.86rem;color:var(--gray);letter-spacing:-.005em}
+
 /* ===== SKILLS ===== */
 .skills-panel{background:var(--panel);border-radius:var(--radius);padding:46px clamp(26px,5vw,60px)}
 .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:34px 44px}
@@ -117,7 +161,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   header{padding:84px 0 70px}
   .nav-links{gap:16px}
   .project{text-align:left}
-  .status,.project-links{justify-content:flex-start}
+  .status,.project-links,.badges,.highlights{justify-content:flex-start}
+  .highlights{margin-left:0}
+  .proof{grid-template-columns:repeat(2,1fr);gap:24px 18px;margin-top:48px}
 }
 </style>
 </head>
@@ -145,6 +191,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
       <a href="https://github.com/Jaswant06" target="_blank" rel="noopener">GitHub</a>
       <a href="https://huggingface.co/JaswantDev" target="_blank" rel="noopener">Hugging Face</a>
       <a href="https://linkedin.com/in/jaswantsingh06" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="proof">
+      <div><strong>4</strong><span>live ML projects</span></div>
+      <div><strong>15,200</strong><span>LLM answers benchmarked</span></div>
+      <div><strong>300+</strong><span>AI outputs evaluated</span></div>
+      <div><strong>2 years</strong><span>in AI training and evaluation</span></div>
     </div>
   </div>
 </header>
@@ -202,13 +254,19 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
    first), edit the fields, save, upload to GitHub. Done.
    "demo" and "code" are optional: delete the line if a project
    has neither, and the card adapts automatically.
+   Also optional: "highlights" (short results shown as pills),
+   "featured: true" (adds a Featured label), and "image"
+   ({ light, dark, alt }) for a screenshot under the links.
    ============================================================ */
 const PROJECTS = [
   {
     name: "ShiftAI: Adaptive LLM Routing",
     status: "live",
     stack: "Python · Ollama · Qwen 3.5 · nomic-embed-text · scikit-learn · FastAPI · Docker · Transformers.js",
-    blurb: "Sends each prompt to the smallest local LLM that can answer it well instead of always using the largest. An embedding-based capability predictor scores a 0.8B to 9B model ladder, and a routing rule tuned on held-out data picks the cheapest model that meets the user's quality target. On 760 test prompts: 90% of the 9B's quality, 44% faster, 40% less measured energy.",
+    blurb: "Sends each prompt to the smallest local LLM that can answer it well instead of always using the largest. An embedding-based capability predictor scores a 0.8B to 9B model ladder, and a routing rule tuned with cross-validation picks the cheapest model that meets the user's quality target. Benchmarked against single models, a tuned random split and an oracle, with the cases where it does not win documented.",
+    highlights: ["89.9% of the 9B model's quality", "44% faster", "40% less measured energy", "760 held-out test prompts"],
+    featured: true,
+    image: { light: "img/shiftai-demo-light.png", dark: "img/shiftai-demo-dark.png", alt: "ShiftAI demo routing a word problem to the Qwen 3.5 2B model, with each model's predicted chance of a good answer and estimated time" },
     demo: "https://huggingface.co/spaces/JaswantDev/shiftai-router",
     code: "https://github.com/Jaswant06/shiftai-router"
   },
@@ -217,6 +275,7 @@ const PROJECTS = [
     status: "live",
     stack: "Python · Llama-3.3-70B · Sentence-Transformers · FastAPI · Docker",
     blurb: "Ask questions about any PDF and get answers grounded in the document itself, with page citations. Retrieval augmented generation constrains a 70B LLM to answer only from retrieved passages, and the pipeline refuses to answer when the document does not contain the answer.",
+    highlights: ["Page-level citations", "Says “not found” instead of guessing", "REST API, Docker, offline tests"],
     demo: "https://huggingface.co/spaces/JaswantDev/rag-pdf-assistant",
     code: "https://github.com/Jaswant06/rag-pdf-assistant"
   },
@@ -225,6 +284,7 @@ const PROJECTS = [
     status: "live",
     stack: "Python · Sentence-Transformers · FastAPI · Docker",
     blurb: "Scores a resume against a job description using sentence embeddings, surfacing missing requirements by meaning rather than keyword overlap. Stress-tested and honestly documented: similarity cannot reason about years of experience or degree equivalence, so the scope is constrained to what the model can actually do.",
+    highlights: ["Match score and skill-gap list", "Matches meaning, not keywords", "REST API and Docker"],
     demo: "https://huggingface.co/spaces/JaswantDev/ai-resume-matcher",
     code: "https://github.com/Jaswant06/ai-resume-matcher"
   },
@@ -233,6 +293,7 @@ const PROJECTS = [
     status: "live",
     stack: "PyTorch · Hugging Face Transformers",
     blurb: "BERTweet fine-tuned for 11-label emotion classification on SemEval-2018, benchmarked against TF-IDF, BiLSTM, and DistilBERT baselines. 0.73 micro F1 with per-label threshold tuning, plus a calibration stress test on out-of-distribution text with documented root causes.",
+    highlights: ["0.73 micro-F1", "11 emotions", "4 models benchmarked"],
     demo: "https://huggingface.co/spaces/JaswantDev/tweet-emotion-classifier",
     code: "https://github.com/Jaswant06/semeval-emotion-classification-pytorch"
   }
@@ -240,20 +301,23 @@ const PROJECTS = [
 
 /* Edit skills here. Each entry is [label, items]. */
 const SKILLS = [
-  ["Programming", "Python, Java, SQL, Bash, Git, Linux"],
-  ["Machine Learning & NLP", "PyTorch, Hugging Face Transformers, Sentence-Transformers, scikit-learn, pandas, NumPy, transformer fine-tuning, model evaluation and calibration"],
-  ["LLM & RAG", "Retrieval augmented generation, embeddings, semantic search, prompt engineering, hallucination prevention and grounding, LLM routing, local LLMs with Ollama, LLM-as-judge evaluation"],
-  ["Deployment", "FastAPI, REST APIs, Docker, pytest, Gradio, Hugging Face Spaces, Oracle Cloud Infrastructure"],
+  ["Programming", "Python, Java, JavaScript, SQL, Bash, Git, Linux"],
+  ["Machine Learning & NLP", "PyTorch, Hugging Face Transformers, Sentence-Transformers, scikit-learn, pandas, NumPy, transformer fine-tuning, k-means clustering, novelty detection, model calibration"],
+  ["LLM & RAG", "Retrieval augmented generation, embeddings, semantic search, prompt engineering, hallucination prevention and grounding, local LLMs with Ollama"],
+  ["LLM Inference & Evaluation", "LLM routing, inference optimization, latency and energy profiling, quantization, ONNX, LLM-as-a-judge, cross-validation, baselines and ablations"],
+  ["Deployment", "FastAPI, REST APIs, Docker, GitHub Actions CI, pytest, Gradio, Hugging Face Spaces, Oracle Cloud Infrastructure"],
   ["Security", "Vulnerability assessment, network segmentation, Zero Trust, CVSS, NIST CSF, OT/ICS security"]
 ];
 
 /* Edit experience here. Each entry: title, org, dates, one-line summary. */
 const ROLES = [
-  ["AI Model Evaluator", "Mercor · Remote", "2026 – present",
-   "Evaluate AI-generated documents and presentations against multi-dimensional rubrics covering content accuracy, visual quality, and editability. Produce calibrated scores backed by concrete, slide-level and section-level evidence, keeping rationales consistent with scores across domains from engineering to business."],
-  ["Advanced AI Data Trainer / Editor", "Invisible Technologies · Remote", "2024 – present",
-   "Evaluate LLM responses against detailed project rubrics for accuracy, completeness, and instruction adherence. Promoted to Editor based on evaluation quality: now review and correct other evaluators' work and write structured reports on recurring model failure patterns for distributed training teams."],
-  ["OT Security Engineer", "NG Energy Solutions · Contract", "2023 – 2025",
+  ["Cybersecurity Writer, AI Training Data", "Mercor · Remote", "Jul 2026 – present",
+   "Write expert-level cybersecurity questions used to train and benchmark frontier LLMs, each with ten answer options and exactly one correct answer. Calibrate difficulty adversarially so that models over 30B parameters answer correctly only about half the time, and document the full reasoning behind every answer and distractor."],
+  ["AI Content Evaluator", "Mercor · Remote", "Jun 2026 – Jul 2026",
+   "Evaluated AI-generated documents, presentations and spreadsheets against multi-dimensional rubrics covering content accuracy, structure, and instruction adherence, completing 300+ evaluations. Backed every score with concrete, section-level evidence and structured written feedback."],
+  ["Advanced AI Data Trainer / Editor", "Invisible Technologies · Remote", "Sep 2024 – May 2026",
+   "Evaluated LLM responses against detailed project rubrics for accuracy, completeness, and instruction adherence. Promoted to Editor based on evaluation quality: reviewed and corrected other evaluators' work and wrote structured reports on recurring model failure patterns for distributed training teams."],
+  ["OT Security Engineer", "NG Energy Solutions · Contract", "Dec 2023 – Nov 2025",
    "Hardened Industrial Control Systems and OT networks: vulnerability assessment with CVSS-based remediation prioritization, network segmentation, access control, and industrial firewall configuration. Documented findings and remediation plans for engineering and IT teams."]
 ];
 
@@ -265,12 +329,23 @@ document.getElementById("project-list").innerHTML = PROJECTS.map(p => {
     p.demo ? `<a href="${esc(p.demo)}" target="_blank" rel="noopener">Try the live demo</a>` : "",
     p.code ? `<a href="${esc(p.code)}" target="_blank" rel="noopener">View the code</a>` : ""
   ].filter(Boolean).join("");
-  return `<article class="project">
-    ${p.status === "live" ? `<div class="status">Live</div>` : ""}
+  const badges = [
+    p.status === "live" ? `<div class="status">Live</div>` : "",
+    p.featured ? `<div class="badge">Featured</div>` : ""
+  ].filter(Boolean).join("");
+  const highlights = p.highlights ? `<ul class="highlights">${p.highlights.map(h => `<li>${esc(h)}</li>`).join("")}</ul>` : "";
+  const image = p.image ? `<a class="shot" href="${esc(p.demo || p.code || "#")}" target="_blank" rel="noopener"><picture>
+      <source srcset="${esc(p.image.dark)}" media="(prefers-color-scheme: dark)">
+      <img src="${esc(p.image.light)}" alt="${esc(p.image.alt)}" width="1200" height="797" loading="lazy">
+    </picture></a>` : "";
+  return `<article class="project${p.featured ? " featured" : ""}">
+    ${badges ? `<div class="badges">${badges}</div>` : ""}
     <h3>${esc(p.name)}</h3>
     <div class="stack">${esc(p.stack)}</div>
     <p class="blurb">${esc(p.blurb)}</p>
+    ${highlights}
     <div class="project-links">${links}</div>
+    ${image}
   </article>`;
 }).join("");
 
