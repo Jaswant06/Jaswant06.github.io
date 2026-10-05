@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaswant Singh | ML Engineer</title>
-<meta name="description" content="Jaswant Singh: machine learning engineer. Deployed ML projects in NLP, semantic search, and retrieval augmented generation.">
+<meta name="description" content="Jaswant Singh: machine learning engineer. Deployed ML projects in NLP, semantic search, retrieval augmented generation, and LLM routing.">
 <meta name="color-scheme" content="light dark">
 <style>
 :root{
@@ -205,6 +205,14 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
    ============================================================ */
 const PROJECTS = [
   {
+    name: "ShiftAI: Adaptive LLM Routing",
+    status: "live",
+    stack: "Python · Ollama · Qwen 3.5 · nomic-embed-text · scikit-learn · FastAPI · Docker · Transformers.js",
+    blurb: "Sends each prompt to the smallest local LLM that can answer it well instead of always using the largest. An embedding-based capability predictor scores a 0.8B to 9B model ladder, and a routing rule tuned on held-out data picks the cheapest model that meets the user's quality target. On 760 test prompts: 90% of the 9B's quality, 44% faster, 40% less measured energy.",
+    demo: "https://huggingface.co/spaces/JaswantDev/shiftai-router",
+    code: "https://github.com/Jaswant06/shiftai-router"
+  },
+  {
     name: "DocuMind: RAG PDF Assistant",
     status: "live",
     stack: "Python · Llama-3.3-70B · Sentence-Transformers · FastAPI · Docker",
@@ -234,7 +242,7 @@ const PROJECTS = [
 const SKILLS = [
   ["Programming", "Python, Java, SQL, Bash, Git, Linux"],
   ["Machine Learning & NLP", "PyTorch, Hugging Face Transformers, Sentence-Transformers, scikit-learn, pandas, NumPy, transformer fine-tuning, model evaluation and calibration"],
-  ["LLM & RAG", "Retrieval augmented generation, embeddings, semantic search, prompt engineering, hallucination prevention and grounding"],
+  ["LLM & RAG", "Retrieval augmented generation, embeddings, semantic search, prompt engineering, hallucination prevention and grounding, LLM routing, local LLMs with Ollama, LLM-as-judge evaluation"],
   ["Deployment", "FastAPI, REST APIs, Docker, pytest, Gradio, Hugging Face Spaces, Oracle Cloud Infrastructure"],
   ["Security", "Vulnerability assessment, network segmentation, Zero Trust, CVSS, NIST CSF, OT/ICS security"]
 ];
